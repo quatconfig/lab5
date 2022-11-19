@@ -21,14 +21,14 @@ contract ERC20Basic is IERC20 {
 
     string public constant name = "ERC20Basic";
     string public constant symbol = "ERC";
-    uint8 public constant decimals = 18;
+    uint8 public constant decimals = 1;
 
 
     mapping(address => uint256) balances;
 
     mapping(address => mapping (address => uint256)) allowed;
 
-    uint256 totalSupply_ = 10;
+    uint256 totalSupply_ = 100*(10**decimals);
 
 
    constructor() {
